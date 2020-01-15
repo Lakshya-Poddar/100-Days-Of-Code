@@ -75,13 +75,72 @@
 	margin: auto;
 
 }
+.date{
 
-
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.6em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(28,28,28,.5);
+}
+.cardtext{
+	font-size: 14px;
+    line-height: 1.4em;
+    margin: 0 0 10px 0;
+    text-align: left;
+    color: rgba(28,28,28,.5);
+}
+.carda{
+	border: none!important;
+}
+.car img{
+	width: 20rem!important;
+	height: 20rem!important;
+}
+.month{
+	width: 100%;
+	overflow: hidden;
+	padding:15px;
+	padding-top: 3rem;
+	margin-top: 3rem;
+}
+.month img{
+	width: 80%;
+	padding:15px;
+}
+.cardtext1{
+	font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 0 10px 0;
+    text-align: left;
+    color: rgba(28,28,28,.5);}
+.footer{
+  background-color: #000!important;
+  color: white;
+  padding: 1rem 0 1rem;
+}
+.footer svg.svg-inline--fa{
+  font-size: 1.6rem;
+  margin: 1.2rem .5rem 0 0 ;
+  background-color: rgba(0, 0, 0, 0);
+  color: #a0ccdb;
+}
+.footer svg.svg-inline--fa:hover{
+  color: white !important;
+}
+.footer2{
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
 
 @media(max-width:767px ){
 	.home-h1{
 		font-size: 1.3rem;
 	}
 }
-
 
