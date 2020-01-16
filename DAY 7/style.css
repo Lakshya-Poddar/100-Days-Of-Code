@@ -2,7 +2,7 @@
 	background-color: #a0ccdb;
 	margin: 0;
 	padding: 0;
-	font-style: sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 .prenav{
 	font-size: 0.75rem;
@@ -16,13 +16,16 @@
 }
 .nav-size{
 	font-size: .6rem;
+	width: 100%;
+	margin: auto;
 }
 .nav-size li{
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
 	line-height: .5rem;
 	font-weight: 600;
 	letter-spacing: .5px;
+
 
 }
 .home{
@@ -36,7 +39,6 @@
 	width: 100%;
 }
 .home-h1{
-	position: absolute;
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -56,12 +58,16 @@
 
 }
 .about h1{
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 42px;
+	color: #4a3f3b;
 }
 .about p{
 	margin: 0;
-	font-size: 0.8rem;
+	font-size: 15px;
 	line-height: 2rem;
+	color: rgba(0,0,0,0.5);
+	font-weight: 600;
 
 }
 .about{
@@ -75,6 +81,12 @@
 	margin: auto;
 
 }
+.upcoming h2{
+	color: #4a3f3b;
+	font-size: 32px;
+	padding-bottom: 3rem;
+	padding-top: 2rem;
+}
 .date{
 
     font-weight: 500;
@@ -85,10 +97,13 @@
     text-transform: uppercase;
     color: rgba(28,28,28,.5);
 }
+.hrr{
+	margin: none!important;
+	background-color: #000;
+}
 .cardtext{
 	font-size: 14px;
     line-height: 1.4em;
-    margin: 0 0 10px 0;
     text-align: left;
     color: rgba(28,28,28,.5);
 }
@@ -96,19 +111,39 @@
 	border: none!important;
 }
 .car img{
-	width: 20rem!important;
-	height: 20rem!important;
+	width: 440px!important;
+	height: 440px!important;
+}
+.news h3{
+	font-size: 25px;
+	color: rgba(28, 28, 28, 0.8);
+	font-weight: 700;
+	padding-bottom: 3rem;
 }
 .month{
 	width: 100%;
 	overflow: hidden;
 	padding:15px;
-	padding-top: 3rem;
-	margin-top: 3rem;
+	padding-top: 7rem;
+
+}
+.month h3{
+	font-size: 25px;
+	color: rgba(28, 28, 28, 0.8);
+	font-weight: 600;
 }
 .month img{
-	width: 80%;
-	padding:15px;
+	width: 90%;
+	
+}
+.monthp{
+	font-size: 15px;
+	color: rgba(0,0,0,0.5);
+}
+.cardtext2{
+	font-size: 19.5px;
+	color: #000000;
+	margin: 19.5px 0px 3.9px;
 }
 .cardtext1{
 	font-size: 18px;
@@ -120,27 +155,57 @@
   background-color: #000!important;
   color: white;
   padding: 1rem 0 1rem;
+  width: 100%;
 }
 .footer svg.svg-inline--fa{
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   margin: 1.2rem .5rem 0 0 ;
   background-color: rgba(0, 0, 0, 0);
-  color: #a0ccdb;
+  border: 2px solid white!important;
+  padding: 8px;
+  color: #FFFFFF;
+  border-radius: 50%;
 }
 .footer svg.svg-inline--fa:hover{
-  color: white !important;
+  color: black !important;
+  background-color: white;
 }
 .footer2{
-	background-color: black;
+	background-color: #171717;
 	color: white;
-	font-size: 16px;
+	font-size: 12px;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+}
+.footer2 p{
+	font-size: 13px;
+	color: #FFFFFF;
+	background-color: #171717;
+}
+.footer2p{
+	color: rgba(255,255, 255, 0.4)!important;
+	font-size: 14.5px!important;
 }
 
 @media(max-width:767px ){
 	.home-h1{
-		font-size: 1.3rem;
+		font-size: 1rem;
+	}
+		.aboutimg{
+		width: 90vw;
+		margin: 0.5rem;
+		margin: auto;
 	}
 }
+@media (max-width: 567px){
+	.aboutimg{
+		width: 90vw;
+		margin: 0.5rem;
+		margin: auto;
+	}
+	.home-h1{
+		font-size: 1.1rem;
+	}
+}
+
 
