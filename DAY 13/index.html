@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+
+<body>
+	<p id="lakshya">laskhya</p>
+	<p class="poddar">poddar</p>
+<script type="text/javascript">
+	function myfun(){
+	var confirmtag= confirm("do you want to visit website");
+	if(confirmtag==true){
+		window.open("https://xyz.com");
+		return true;
+	}else{
+		document.write("no redirection required");
+		return false;
+	}
+}
+	var a=document.getElementById('lakshya');
+	document.write(a);
+	var b=document.getElementsByClassName('poddar')[0].innerText;
+	document.write(b);
+
+	var para=document.createElement('p');
+	
+
+	
+</script>
+</body>
+</html>
