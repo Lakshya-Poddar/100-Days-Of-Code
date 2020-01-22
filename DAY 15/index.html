@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+
+<body>
+	<p id="lakshya">laskhya</p>
+
+	<p id="lakshya1">laskhya</p>
+	<div id="print">
+	<button onclick="myfun()">poddar</button></div>
+<script type="text/javascript">
+	document.getElementById("lakshya").style.color = "red";
+	document.getElementById("lakshya1").setAttribute("style", "color: orange; font-size:25px;height :100px;")
+	document.write(window.location.protocol);
+	function myfun () {
+			var backup=document.body.innerHTML;
+			var divcontent=document.getElementById("print").innerHTML;
+			document.body.innerHTML=divcontent;
+			window.print();
+
+			window.location="http://www.google.com/";
+
+			/*events*/
+			// body... 
+	}
+
+</script>
+</body>
+</html>
