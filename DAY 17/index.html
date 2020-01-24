@@ -1,0 +1,65 @@
+<html>
+<head>
+	<style>
+		.formstyle{
+			width: 450px;
+			padding-left: 25px;
+			margin: auto;
+			border: 2px solid black;
+		}
+		input{
+			width: 100px;
+			height: 70px;
+			padding: 20px;
+			font-size: 25px;
+			margin: 15px;
+			background-color: greenyellow;
+			font-weight: 700;
+
+		}
+		#answerstyle{
+			width: 380px;
+		}
+		#clear{
+			width: 380px;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+<div class="formstyle">
+	<form name="forms">
+		<input type="text" name="answer" id="answerstyle"><br>
+
+		<input type="button"  value="1" onclick="forms.answer.value+='1'">
+		<input type="button"  value="2" onclick="forms.answer.value+='2'">
+		<input type="button"  value="3" onclick="forms.answer.value+='3'"><br>
+		<input type="button"  value="4" onclick="forms.answer.value+='4'">
+		<input type="button"  value="5" onclick="forms.answer.value+='5'">
+		<input type="button"  value="6" onclick="forms.answer.value+='6'"><br>
+		<input type="button"  value="7" onclick="forms.answer.value+='7'">
+		<input type="button"  value="8" onclick="forms.answer.value+='8'">
+		<input type="button"  value="9" onclick="forms.answer.value+='9'"><br>
+		<input type="button"  value="+" onclick="forms.answer.value+='+'">
+		<input type="button"  value="-" onclick="forms.answer.value+='-'">
+		<input type="button"  value="*" onclick="forms.answer.value+='*'"><br>
+		<input type="button"  value="/" onclick="forms.answer.value+='/'">
+		<input type="button"  value="0" onclick="forms.answer.value+='0'">
+		<input type="button"  value="=" onclick="forms.answer.value=eval(forms.answer.value)"><br>
+		<input type="button" value="CLEAR ALL" onclick="forms.answer.value=''" id="clear">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
