@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Love Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid text-center " style="background-color: red;color: white"><h1 class="text-dark">LOVE CALCULATOR</h1></div><br>
+	<div class="container">
+	<div class="row ">
+		<div class="col-md-4 col-sm-4">
+	<input type="text" class="form-control" placeholder="Your Name"></div>
+	<div class="col-md-4 col-sm-4 text-center">
+	<span>+</span></div>
+	<div class="col-md-4 col-sm-4">
+	<input type="text" class="form-control" placeholder="Love Name"></div>
+	</div></div>
+	<div class="container align-content-center justify-content-center ">
+	<button style="width: 100%;
+	margin: auto!important;" class="btn btn-success align-content-center justify-content-center" onclick="checkloveper()"> Calculate</button>	
+	</div>
+
+	
+
+<div class="w-25 container">
+	<input type="text" id="lovevalue" class="form-control text-center m-auto" >
+</div>
+
+
+<script>
+	function checkloveper () {
+		var lovdata=Math.floor(Math.random()*100);
+		document.getElementById('lovevalue').value=lovdata+"%";
+		// body... 
+	}
+</script>
+</body>
+</html>
