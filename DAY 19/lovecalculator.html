@@ -9,32 +9,36 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container-fluid text-center " style="background-color: red;color: white"><h1 class="text-dark">LOVE CALCULATOR</h1></div><br>
+	<div class="container-fluid text-center " style="background-color: red;color: white"><h1 class="text-dark">LOVE CALCULATOR</h1></div><br><br><br><br>
 	<div class="container">
 	<div class="row ">
 		<div class="col-md-4 col-sm-4">
-	<input type="text" class="form-control" placeholder="Your Name"></div>
+	<input type="text" class="form-control" placeholder="Your Name" id="first"></div>
 	<div class="col-md-4 col-sm-4 text-center">
 	<span>+</span></div>
 	<div class="col-md-4 col-sm-4">
-	<input type="text" class="form-control" placeholder="Love Name"></div>
-	</div></div>
-	<div class="container align-content-center justify-content-center ">
-	<button style="width: 100%;
-	margin: auto!important;" class="btn btn-success align-content-center justify-content-center" onclick="checkloveper()"> Calculate</button>	
+	<input type="text" class="form-control" placeholder="Love Name" id="second"></div>
+	</div></div><br><br><br>
+	<div class="text-center">
+	<button  class="btn btn-success text-center" onclick="checkloveper()"> Calculate</button><br><br><br><br>
+	<input type="text" id="lovevalue" class="form-control" style="width: 5%;
+	margin: auto;" >	
 	</div>
 
 	
 
-<div class="w-25 container">
-	<input type="text" id="lovevalue" class="form-control text-center m-auto" >
+<div class="container text-center">
+	
 </div>
 
 
 <script>
 	function checkloveper () {
+		if(document.getElementById('first').value!=''&&document.getElementById('second').value!=''){
 		var lovdata=Math.floor(Math.random()*100);
-		document.getElementById('lovevalue').value=lovdata+"%";
+		document.getElementById('lovevalue').value=lovdata+"%";}
+		else
+			document.getElementById('lovevalue').value="ENTER NAME";
 		// body... 
 	}
 </script>
