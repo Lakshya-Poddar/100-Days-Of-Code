@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Typing Speed</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.mainDiv{
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			background-color: #3498db;
+		}
+		.centerDiv{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="mainDiv">
+		<div class="centerDiv">
+			<h1 style="text-align: center;">Welcome to Typing Speed Test</h1>
+			<h2 id="msg"></h2><br>
+			<textarea id="mywords" cols="100" rows="10" placeholder="Let the game begin"></textarea><br>
+			<button id="btn" class="mainbtn">Start</button>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+	const setOfWords=["Lorem Ipsum is simply dummy text of the printing and typesetting industry.","Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.","It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."];
+	const msg=document.getElementById('msg');
+	const mywords=document.getElementById('mywords');
+	const btn=document.getElementById('btn');
+	let startTime,endTime;
+	const playGame=()=>{
+		let randomno=Math.floor(Math.random()*3);
+		msg.innerText=setOfWords[randomno];
+		let date=new Date();
+		startTime=date.getTime();
+		btn.innerText='Done';
+	}
+	const endPlay=()=>{
+		let date=new Date();
+		endTime=date.getTime();
+		let totalTime=(endTime-startTime)/1000;
+
+		let totalStr=mywords.value;
+		let wordcount=wordcounter(totalStr);
+
+		let speed=Math.round(wordcount/totalTime)*60;
+		let finalMsg="You Typed at "+speed+" words per min.  ";
+
+		finalMsg+=comparewords(msg.innerText,mywords.value);
+
+		msg.innerText=finalMsg;
+
+
+
+	}
+	const comparewords=(str1,str2)=>{
+		let words1=str1.split(" ");
+		let words2=str2.split(" ");
+		let cnt=0;		
+		words1.forEach( function(item, index) {
+			if(item==words2[index]){
+				cnt++;
+			}
+
+		});
+
+		let errorwords=(words1.length-cnt);
+		return(cnt+" correct out of " + words1.length+" words and the total no of error are "+errorwords+".")
+	}
+	const wordcounter=(str)=>{
+		let response=str.split(" ").length;
+		return response;
+
+	}
+	btn.addEventListener('click', function () {			
+		if(this.innerText=='Start'){
+			mywords.disabled=false;
+			playGame();
+		}
+		else if(this.innerText=='Done'){
+			mywords.disabled=true;
+			btn.innerText="Start";
+			endPlay();
+
+		}
+
+
+	})
+
+
+</script>
+</body>
+</html>
