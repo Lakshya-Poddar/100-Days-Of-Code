@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<input type="text" placeholder="WEB PROGRAMMING" id="wd"><br>
+	<input type="text" placeholder="MATHS" id="maths"><br>
+	<input type="text" placeholder="COMPUTER" id="comp"><br>
+	<input type="text" placeholder="PHYSICS" id="phy"><br>
+	<input type="button" value="showPercentage" onclick="calcy()">
+	<p id="showData"></p>
+
+<script type="text/javascript">
+	const calcy=()=>{
+		let wd=document.getElementById('wd').value;
+		let maths=document.getElementById('maths').value;
+		let comp=document.getElementById('comp').value;
+		let phy=document.getElementById('phy').value;
+		let grades="";
+
+		let totalgrades=parseFloat(wd)+parseFloat(maths)+parseFloat(comp)+parseFloat(phy);
+		let perc=totalgrades/4;
+
+
+
+
+		if(perc<=100 && perc>=80)
+			grades="A";
+		else if (perc<80&&perc>=60) 
+			grades="B";
+		else if (perc<59&&perc<=40)
+			grades="C";
+		else
+			grades="F";
+		
+		if(perc>=39.5)
+			document.getElementById('showData').innerHTML=` Out of 400 your total is ${totalgrades} , your percentage is ${perc}%.<br> Your grade is ${grades} PASSSS `
+		else
+			document.getElementById('showData').innerHTML=` Out of 400 your total is ${totalgrades} , your percentage is ${perc}%.<br> Your grade is ${grades}  FAIIILLL`
+
+		
+
+
+
+
+	}
+</script>
+
+</body>
+</html>
