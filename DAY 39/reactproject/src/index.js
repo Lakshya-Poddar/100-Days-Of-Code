@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Avatar from './Avatar'
-ReactDOM.render(<div><Avatar id='1' name='lakshya' work='webdeveloper' /><Avatar /><Avatar /><Avatar /></div>, document.getElementById('root'));
+ReactDOM.render(<div><Avatar/></div>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
