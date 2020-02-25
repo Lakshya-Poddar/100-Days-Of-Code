@@ -5,21 +5,17 @@ class Comp extends Component {
         super(props)
     
         this.state = {
-             isLoggedIn:false
         }
-        this.change=this.change.bind(this)
     }
-    change(){
-        this.setState({
-            isLoggedIn:!this.state.isLoggedIn
-        })
-    }
+   componentDidMount(){
+fetch("/api/people/1")
+    .then(response => response.json())
+    .then(data =>console.log(data))
+}
     render() {
-        let btntext= this.state.isLoggedIn?"Log in": "Log out"
         return (
             <div>
-               {this.state.isLoggedIn?<h1>Logged out</h1>:<h1>Logged In</h1>} 
-               <button onClick={this.change}>{btntext}</button>
+               
             </div>
         )
     }
