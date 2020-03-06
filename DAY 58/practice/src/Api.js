@@ -5,10 +5,16 @@ class Api extends Component {
         super(props)
     
         this.state = {
-             dataval:""
+             dataval:"",
         }
     }
-    
+    handlechange=(event)=>{
+        const {name,value}=event.target
+        this.setState({
+        [name]:value
+        })
+    }
+
     componentDidMount(){
         fetch("http://api.com")
             .then(response => response.json())
@@ -17,7 +23,7 @@ class Api extends Component {
     render() {
         return (
             <div>
-                {this.state.dataval}   
+                {this.state.dataval.name}
             </div>
         )
     }
