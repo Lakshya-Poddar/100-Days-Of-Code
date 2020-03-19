@@ -5,7 +5,7 @@ import Title from '../components/Title'
 
 //get all unique values
 const getUnique=(item,value)=>{
-    return [...new Set(item.map(item=>item[value]))]
+    return [...new Set(item.map(items=>items[value]))]
 }
 
 function RoomFilter({rooms}) {
